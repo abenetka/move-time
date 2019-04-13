@@ -1,0 +1,8 @@
+<h1>Move Time</h1>
+<div class="search_location_container">
+  <h3>Where do you want to move?</h3>
+  <%= form_tag :search_result, method: :get do %>
+    <%= text_field_tag :location, placeholder: "Enter the City, State" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</div>
