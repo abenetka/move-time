@@ -16,8 +16,9 @@ describe 'as a user when they visit the sit' do
       fill_in :location, with: "Denver, CO"
       click_on "Search"
     end
-    expect(current_path).to eq(search_path)
-    expect(page).to have_content("Population: ")
+    population = 2115827
+    expect(current_path).to eq(search_result_path)
+    expect(page).to have_content("Population: #{population}")
   end
 
 end
