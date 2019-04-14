@@ -28,6 +28,8 @@ describe 'as a user when they visit the sit' do
     walk_description = "Walker's Paradise"
     bike_score = 94
     bike_description = "Biker's Paradise"
+    brewery_count = 3
+
     expect(page).to have_content("#{location}")
     expect(page).to have_content("Population: #{population} people")
     expect(page).to have_content("Median Age: #{median_age} years old")
@@ -36,6 +38,7 @@ describe 'as a user when they visit the sit' do
     expect(page).to have_content("It has a walkability score of #{walk_score}")
     expect(page).to have_content("and is a #{bike_description}")
     expect(page).to have_content(" and a bikeability score of #{bike_score}")
+    expect(page).to have_content("There are #{brewery_count} breweries in this area!")
   end
 
 
