@@ -34,11 +34,9 @@ describe 'as a user when they visit the sit' do
     expect(page).to have_content("Population: #{population} people")
     expect(page).to have_content("Median Age: #{median_age} years old")
     expect(page).to have_content("Average Household Size: #{avg_household_size} people")
-    expect(page).to have_content("#{location} is a #{walk_description}")
-    expect(page).to have_content("It has a walkability score of #{walk_score}")
-    expect(page).to have_content("and is a #{bike_description}")
-    expect(page).to have_content(" and a bikeability score of #{bike_score}")
-    expect(page).to have_content("There are #{brewery_count} breweries in this area!")
+    expect(page).to have_content("Walk Score: #{walk_score}, #{walk_description}")
+    expect(page).to have_content("Bike Score: #{bike_score}, #{bike_description}")
+    expect(page).to have_content("Breweries: #{brewery_count} in this area!")
   end
 
 
