@@ -28,7 +28,7 @@ describe 'as a user when they visit the sit' do
     walk_description = "Walker's Paradise"
     bike_score = 94
     bike_description = "Biker's Paradise"
-    brewery_count = 3
+    brewery_count = 0
 
     expect(page).to have_content("#{location}")
     expect(page).to have_content("Population: #{population} people")
