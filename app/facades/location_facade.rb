@@ -39,9 +39,17 @@ class LocationFacade
     coordinates_service[:lat]
   end
 
+  def find_breweries
+    if brewery_service[:data]
+      brewery_service[:data].count
+    else brewery_service[:status] == "success"
+      0
+    end
+  end
+
   def split_location
-  @location.split(', ')
-end
+    @location.split(', ')
+  end
 
   def location_service
     @_location_service ||= OpenDataService.new.get_census_data(@location)
@@ -55,5 +63,11 @@ end
     lat = find_latitude
     lon = find_longitude
     @_walk_score_service ||= WalkScoreService.new.get_walk_score(lat, lon)
+  end
+
+  def brewery_service
+    lat = find_latitude
+    lon = find_longitude
+    @_brewery_service ||= BreweryService.new.get_breweries(lat, lon)
   end
 end
