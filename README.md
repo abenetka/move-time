@@ -6,14 +6,16 @@
 
 MoveTime is the final technical challenge of Turing School's Backend Engineering Program. I was tasked to create a tool for people that are considering moving to a new city and to give them some data points about the city they are considering.
 
-The project is built with Ruby on Rails, using Travis CI for continuous integration and is deployed with Heroku. It consumes the following APIs to provide users with data about different locations:
+The project is built with Ruby on Rails, uses Travis CI for continuous integration, and is deployed with Heroku. It consumes the following APIs to provide users with data about different locations:
 
 * [OpenDataSoft](https://data.opendatasoft.com/pages/home/)
 * [Walk Score](https://www.walkscore.com/professional/api.php)
 * [BreweryDB](https://www.brewerydb.com/developers)
-* [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
+* [Google Maps](https://developers.google.com/maps/documentation/)
 
 #### [*View Move Time in Production*](https://thawing-thicket-96502.herokuapp.com/)
+
+<img width="1430" alt="Screen Shot 2019-04-15 at 8 22 57 PM" src="https://user-images.githubusercontent.com/41347275/56177551-4ead9580-5fbc-11e9-88ff-33c91a86d2e9.png">
 
 ## Getting Started
 
