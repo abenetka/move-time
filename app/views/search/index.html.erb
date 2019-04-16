@@ -1,7 +1,12 @@
-<h1><%= @location %></h1>
-<h3>Population: <%= @location_data.find_population %> people</h3>
-<h3>Median Age: <%= @location_data.find_median_age %> years old</h3>
-<h3>Average Household Size: <%= @location_data.find_avg_household_size %> people</h3>
-<h3><%= @location %> is a <%= @location_data.find_walk_description %> and is a <%= @location_data.find_bike_description %></h3>
-<h3>It has a walkability score of <%= @location_data.find_walk_score %> and a bikeability score of <%= @location_data.find_bike_score %></h3>
-<h3>There are <%= @location_data.find_breweries %> breweries in this area!</h3>
+
+<section class="demographic_info">
+    <h1><%= @location %></h1>
+    <h3>Population: <%= @location_data.find_population %> people</h3>
+    <h3>Median Age: <%= @location_data.find_median_age %> years old</h3>
+    <h3>Average Household Size: <%= @location_data.find_avg_household_size %> people</h3>
+</section>
+<section class="neighborhood_info">
+    <h3>Walk Score: <%= @location_data.find_walk_score %>, <%= @location_data.find_walk_description %></h3>
+    <h3>Bike Score: <%= @location_data.find_bike_score %>, <%= @location_data.find_bike_description %></h3>
+    <h3>Breweries: <%= @location_data.find_breweries%> in this area!</h3>
+</section>
