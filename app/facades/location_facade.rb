@@ -38,8 +38,13 @@ class LocationFacade
   def find_latitude
     coordinates_service[:lat]
   end
+
   def find_breweries
-    brewery_service[:data].count
+    if brewery_service[:data]
+      brewery_service[:data].count
+    else brewery_service[:status] == "success"
+      0
+    end
   end
 
   def split_location
